@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice Questions</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <form>
+      <h3>Question 1: What do you want to practice?</h3>
+      <input type="text" id="question1" name="question1" />
+      <br />
+      <h3>Question 2: What grade level?</h3>
+      <input type="text" id="question2" name="question2" />
+      <br />
+      <h3>Question 3: Do you want word problems?</h3>
+      <input
+        type="checkbox"
+        id="question3"
+        name="question3"
+        value="yes"
+        onclick="showQuestion4()"
+      />Yes
+      <input
+        type="checkbox"
+        id="question3"
+        name="question3"
+        value="no"
+        onclick="hideQuestion4()"
+      />No
+      <br />
+      <div id="question4" style="display: none">
+        <h3>Question 4: Metric or Imperial?</h3>
+        <input type="radio" id="metric" name="question4" value="metric" />Metric
+        <input
+          type="radio"
+          id="imperial"
+          name="question4"
+          value="imperial"
+        />Imperial
+      </div>
+      <button type="button">
+        Generate Question
+      </button>
+    </form>
+
+    <p id="question"></p>
+
+    <script>
+      function showQuestion4() {
+        document.getElementById("question4").style.display = "block";
+      }
+
+      function hideQuestion4() {
+        document.getElementById("question4").style.display = "none";
+      }
+    </script>
+
+    
+
+  </body>
+</html>
